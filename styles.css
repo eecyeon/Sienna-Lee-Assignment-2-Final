@@ -1,0 +1,305 @@
+.login-page {
+    margin: 100px auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(151, 189, 202);
+}
+
+.overall-container {
+    width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 7px;
+    border: 3px solid white;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    transition-duration: 2s;
+}
+
+.overall-container.expand {
+    height: auto;
+    width: 900px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 100%;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 5px;
+    height: 100%;
+}
+
+.input-container label{
+    width: 90px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.input-container input{
+    width: 110px;
+    background-color: lightgray;
+    border-radius: 3px;
+    border: 4px solid lightgray;
+    text-align: left;
+}
+
+.robot-container{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    margin: 30px auto;
+        padding: 10px;
+        padding-top:25px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+    display: flex;
+    gap: 2px;
+    box-shadow: 3px 3px 0px rgba(211,211,211,0.6);
+    transition: all 1s ease-in-out;
+    overflow: hidden
+}
+
+.robot-container.expand {
+    width: 600px;
+    height: auto;
+}
+
+.submit-button{
+    height: 30px;
+    width: 70px;
+    background-color: darkblue;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: black;
+}
+
+
+.captcha-image{
+    width: 30px;
+    height: 30px;
+}
+
+
+.input-captcha {
+    display: flex;
+    margin-left: 12px;
+    align-items: center;
+    text-align: center;
+    transition: transform 1.5s ease-in-out;
+    gap: 5px;
+}
+
+.input-captcha.move-left {
+    transform: translateX(-200px);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    animation: Moveleft 2s ease-in-out forwards;
+    gap: 5px;
+}
+
+.selection-container{
+    width: 100%;
+    text-align: left;
+    opacity:0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 4s ease-in-out, max-height 2s ease-in-out;
+    margin-top: 15px;
+    margin-left: 35px;
+
+}
+
+.robot-container.expand .selection-container{
+    opacity: 1;
+    max-height: 120px;
+}
+
+.selection-container label{
+   font-size: small;
+   opacity: 0;
+   transition-duration: 4s;
+}
+
+.robot-container.expand .selection-container label{
+    opacity: 1;
+}
+
+/*Writing Block*/
+
+.writing-block {
+    align-self: center;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0px;
+    opacity: 0;
+    display:block;
+    transition: opacity 4s ease-in-out, max-height 2s ease-in-out;
+}
+
+.robot-container.expand .writing-block {
+    opacity: 1;
+    max-height: 150px;
+    padding: 10px;
+}
+
+.writing-block textarea {
+    align-items: center;
+    margin-left: 17px;
+    margin-right: 17px;
+    width: 90%;
+    height: 0;
+    padding: 0;
+    background-color: lightgray;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+    opacity: 0;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    transition: opacity 4s ease-in-out, max-height 2s ease-in-out, background-color 5s linear;
+}
+
+.robot-container.expand .writing-block textarea {
+    opacity: 1;
+    max-height: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+.writing-block textarea:hover {
+    background-color: red;
+}
+
+#timer-container {
+    width: 100%;
+    text-align: right;
+    margin-right: 30px;
+    font-size: 12px;
+    color: black;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 4s ease-in-out, max-height 2s ease-in-out;
+}
+
+.robot-container.expand #timer-container {
+    opacity: 1;
+    max-height: 20px;
+    padding: 5px;
+}
+
+/*AI Detected Screen*/
+.ai-page {
+    margin: 100px auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 103, 103);
+}
+
+.ai-container {width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 7px;
+    border: 3px solid white;
+    background-color: white;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.robot-icon{
+    height: 70px;
+    width: auto;
+    margin: 10px;
+}
+
+.AI-screen h1{
+    color: red;
+}
+
+.AI-screen h3, .AI-screen h1 {
+    line-height: 0.5;
+}
+
+.AI-screen h5 {
+    margin: 30px;
+}
+
+.return-button{
+    height: 30px;
+    width: 70px;
+    color: white;
+    background-color: red;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.return-button:hover {
+    background-color: black;
+}
+
+/*Fonts*/
+
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
